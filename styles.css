@@ -2,44 +2,40 @@
     animation: fadeIn 0.5s;
 }
 h1 {
-    font-family: 'Rubik';
+    font-family: "Rubik", sans-serif;
     text-align: center;
     font-size: 46px;
     margin-bottom: 20px;
 }
 h2 {
-    font-family: 'Rubik';
+    font-family: "Rubik";
 }
 p {
     font-family: sans-serif;
     margin: 8px 0;
 }
 strong {
-    font-family: 'Rubik';
+    font-family: "Rubik", sans-serif;
 }
 .centered {
     text-align: center;
 }
-.inline{
+.inline {
     display: inline;
 }
 
-
-
 .bodyLight {
-    font-family: 'Rubik', sans-serif;
+    font-family: "Rubik", sans-serif;
     background-color: rgb(240, 240, 240);
     color: rgb(50, 50, 50);
     line-height: 1.6;
 }
 .bodyDark {
-    font-family: 'Rubik', sans-serif;
+    font-family: "Rubik", sans-serif;
     background-color: rgb(20, 20, 20);
     color: rgb(205, 205, 205);
     line-height: 1.6;
 }
-
-
 
 .containerLight {
     max-width: 800px;
@@ -60,8 +56,6 @@ strong {
     overflow: hidden;
 }
 
-
-
 .userHolderLight {
     background: transparent;
     justify-content: center;
@@ -70,8 +64,6 @@ strong {
     background: transparent;
     justify-content: center;
 }
-
-
 
 .userDataLight {
     max-width: 800px;
@@ -99,8 +91,6 @@ strong {
     transform: translateX(475%) translateY(50%) scale(200%);
 }
 
-
-
 .userDataDark {
     max-width: 800px;
     border: 4px solid rgb(220, 220, 220);
@@ -126,8 +116,6 @@ strong {
     transform: translateX(475%) translateY(50%) scale(200%);
 }
 
-
-
 .avatar {
     max-width: 100px;
     border-radius: 10px;
@@ -136,15 +124,13 @@ strong {
     transition: transform 0.5s, scale 0.4s;
 }
 
-
-
 .lightModeButtonLight {
     position: absolute;
     width: 32px;
     height: 32px;
     margin: 0 0;
     background-color: transparent;
-    background-image: url('./Moon.png');
+    background-image: url("./Moon.png");
     background-size: cover;
     background-position: center;
     border: none;
@@ -158,7 +144,7 @@ strong {
     height: 32px;
     margin: 0 0;
     background-color: transparent;
-    background-image: url('./Sun.png');
+    background-image: url("./Sun.png");
     background-size: cover;
     background-position: center;
     border: none;
@@ -177,16 +163,26 @@ strong {
 }
 .containerLight .gradientText {
     background-color: rgb(0, 133, 234);
-    background-image: linear-gradient(to right, rgb(98, 0, 234), rgb(236, 64, 122));
+    background-image: linear-gradient(
+        to right,
+        rgb(98, 0, 234),
+        rgb(236, 64, 122)
+    );
 }
 .containerDark .gradientText {
     background-color: rgb(98, 0, 234);
-    background-image: linear-gradient(to right, rgb(0, 133, 234), rgb(87, 255, 182));
+    background-image: linear-gradient(
+        to right,
+        rgb(0, 133, 234),
+        rgb(87, 255, 182)
+    );
 }
 
-
-
 @keyframes fadeIn {
-    0% {opacity: 0;}
-    100% {opacity: 1;}
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }

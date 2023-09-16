@@ -1,11 +1,11 @@
-const userDataContainer = document.getElementById('userHolder');
+const userDataContainer = document.getElementById("userHolder");
 
 function displayUserData(data) {
-    userDataContainer.innerHTML = ''; // Clear previous data
+    userDataContainer.innerHTML = ""; // Clear previous data
 
-    data.forEach(user => {
-        const userDiv = document.createElement('div');
-        userDiv.classList.add('userHolderLight');
+    data.forEach((user) => {
+        const userDiv = document.createElement("div");
+        userDiv.classList.add("userHolderLight");
 
         // Create HTML structure for user data
         userDiv.innerHTML = `
@@ -29,29 +29,41 @@ function displayUserData(data) {
 
 function lightMode() {
     var tempBody = document.body;
-    tempBody.className = (tempBody.className == "bodyDark") ? "bodyLight" : "bodyDark";
+    tempBody.className =
+        tempBody.className == "bodyDark" ? "bodyLight" : "bodyDark";
     var tempContainer = document.getElementById("container");
-    tempContainer.className = (tempContainer.className == "containerDark") ? "containerLight" : "containerDark";
+    tempContainer.className =
+        tempContainer.className == "containerDark"
+            ? "containerLight"
+            : "containerDark";
     var userHolder = document.getElementById("userHolder");
-    userHolder.className = (userHolder.className == "userHolderDark") ? "userHolderLight" : "userHolderDark";
+    userHolder.className =
+        userHolder.className == "userHolderDark"
+            ? "userHolderLight"
+            : "userHolderDark";
     var userDivs = document.querySelectorAll("div#userData");
 
     userDivs.forEach(function (userDiv) {
-        userDiv.className = (userDiv.className === "userDataDark") ? "userDataLight" : "userDataDark";
+        userDiv.className =
+            userDiv.className === "userDataDark"
+                ? "userDataLight"
+                : "userDataDark";
     });
 
     var tempButton = document.getElementById("lightModeButton");
-    tempButton.className = (tempButton.className == "lightModeButtonDark") ? "lightModeButtonLight" : "lightModeButtonDark";
-
+    tempButton.className =
+        tempButton.className == "lightModeButtonDark"
+            ? "lightModeButtonLight"
+            : "lightModeButtonDark";
 }
 
 // Fetch data from the API
-fetch('https://random-data-api.com/api/v2/users?size=10')
-    .then(response => response.json())
-    .then(data => {
+fetch("https://random-data-api.com/api/v2/users?size=10")
+    .then((response) => response.json())
+    .then((data) => {
         // Call the function to display user data
         displayUserData(data);
     })
-    .catch(error => {
-        console.error('Error fetching data:', error);
+    .catch((error) => {
+        console.error("Error fetching data:", error);
     });
